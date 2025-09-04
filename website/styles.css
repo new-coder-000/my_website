@@ -1,0 +1,256 @@
+/*
+Site Styles - IT-FPX3240 Assessment 2
+Author: Matthew Hawley
+Purpose: One external stylesheet for all pages
+Note:
+- This file will control text, colors, and navigation. 
+- No inline or embedded CSS will be used. 
+*/
+
+/* reset & box model */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    /* Keeps padding/border inside set width */
+    margin: 0;
+    /* removes default margins */
+    padding: 0;
+    /* removes default padding */
+}
+
+/* Base document style */
+
+html {
+    scroll-behavior: smooth;
+    /* Helpful for anchor links later */
+}
+
+body {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 16px;
+    /* Base font size */
+    line-height: 1.6;
+    /* Comfortable line spacing */
+    color: #1b1f24;
+    /* Text color (dark grey) */
+    background: #ffffff;
+    /* Page background (white) */
+    padding: 0 1rem;
+    /* consistent left/right gutters on small screens */
+}
+
+/* Headings & text */
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+    /* bold headings */
+    margin: 0.75rem 0;
+    /* vertical space around headings */
+}
+
+p {
+    margin: 0.5rem 0;
+    /* spacing around paragraphs */
+    padding: 0 0.25rem;
+    /* gentle left/right breathing room */
+}
+
+/* Heading sizes (simple, readable scale) */
+h1 {
+    font-size: 2rem;
+    /* ~32px */
+}
+
+h2 {
+    font-size: 1.5rem;
+    /* ~24px */
+}
+
+h3 {
+    font-size: 1.25rem;
+    /* ~20px */
+}
+
+/* Emphasis/intro paragraphs */
+.lead {
+    color: #6b7280;
+    /* muted gray */
+    font-style: italic;
+    /* style requirement */
+}
+
+/* Links */
+
+a {
+    color: #2b6cb0;
+    /* blue-ish brand color */
+    text-decoration: none;
+    /* no underline by default*/
+}
+
+a:hover {
+    text-decoration: underline;
+    /* underline when hovered */
+}
+
+a:focus-visible {
+    outline: 3px solid #f59e0b;
+    /* orange focus ring for accessibility */
+    outline-offset: 2px;
+}
+
+/* Images */
+
+img {
+    max-width: 100%;
+    /* never wider than the container */
+    height: auto;
+    /* keeps the aspect ratio */
+    display: inline-block;
+    /* behaves nicely with text alignment */
+}
+
+/* Semantic section spacing */
+
+header,
+nav,
+main,
+footer,
+article,
+section {
+    padding: 0.5rem 0;
+    /* gentle top/bottom spacing */
+}
+
+/* Navigation styles */
+
+.nav {
+    list-style: none;
+    /* removes bullets */
+    display: inline-flex;
+    /* makes list horizontal */
+    gap: 0.5rem;
+    /* spacing between links */
+    padding: 0.5rem 0.25rem;
+}
+
+/* .nav__item {
+    reserved for per-item spacing later
+} */
+
+.nav__link {
+    display: inline-block;
+    /* makes the whole area clickable */
+    padding: 0.4rem 0.75rem;
+    /* padding around link text */
+    border: 1px solid #e5e7eb;
+    /* light grey border */
+    border-radius: 999px;
+    /* pill-shaped */
+    background: #ffffff;
+    /* white background */
+    font-weight: 600;
+    /* semi-bold text */
+}
+
+.nav__link:hover {
+    background: #f8fafc;
+    /* light gray hover */
+}
+
+.nav__link[aria-current="page"] {
+    background: #2b6cb0;
+    /* active page highlight */
+    color: #ffffff;
+    /* white text */
+    border-color: #2b6cb0;
+    /* match border to background */
+}
+
+/* Footer styles */
+
+footer {
+    color: #6b7280;
+    /* muted gray */
+    border-top: 1px solid #e5e7eb;
+    /* light grey top border */
+    padding-top: 0.75rem;
+    margin-top: 1rem;
+}
+
+/* Gallery grid */
+#gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+    padding: 0 1rem;
+    /* padding on sides */
+}
+
+/* Gallery figure + caption */
+#gallery-grid figure {
+    text-align: center;
+    /* centers captions under each image */
+}
+
+#gallery-grid figcaption {
+    margin-top: 0.5rem;
+    /* space between image and caption */
+    font-size: 0.875rem;
+    /* a touch smaller than body text */
+    color: #6b7280;
+    /* muted gray to de-emphasize */
+}
+
+/* Optional image polish */
+#gallery-grid img {
+    border-radius: 8px;
+    /* soft corners */
+}
+
+/* Typography: families and weights */
+body {
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 16px;
+    /* base size */
+    line-height: 1.6;
+    /* comfortable reading */
+    color: #1b1f24;
+    background: #ffffff;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Merriweather", Georgia, serif;
+    font-weight: 700;
+    /* strong headings */
+}
+
+/* Make nav labels a touch bolder for legibility */
+.nav__link {
+    font-weight: 600;
+}
+
+/* Interests list styling */
+#interests ul {
+    /* list-style-position: inside; */
+    list-style: none;
+    padding-left: 1rem;
+    margin: 1rem auto;
+    text-align: center;
+    max-width: 600px;
+}
+
+#interests li {
+    display: inline-block;
+    margin: 0.5rem 1rem;
+}

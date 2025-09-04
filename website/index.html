@@ -1,0 +1,49 @@
+<!-- 
+ Author: Matthew Hawley
+ Date: Sunday, August 24, 2025
+ File: index.html
+ Description: Homepage with header (name/logo), primary nav, intro content, and footer
+-->
+<!DOCTYPE html> <!-- Defines the document type-->
+<html lang="en"> <!-- Sets the language to English -->
+
+<head> <!-- Data about the document -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@700&display=swap"
+        rel="stylesheet">
+
+    <meta charset="UTF-8"> <!-- Character encoding for the document -->
+    <title>Homepage – Matthew Hawley</title> <!-- Title of the document -->
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+</head>
+
+<body> <!-- Main content of the document -->
+    <header> <!-- Header section with name and logo -->
+        <img src="assets/logo.png" alt="MH logo" width="150" height="150">
+        <h1>Matthew Hawley</h1>
+    </header>
+    <nav aria-label="Primary">
+        <ul class="nav">
+            <li class="nav__item"><a class="nav__link" href="index.html" aria-current="page">Home</a></li>
+            <li class="nav__item"><a class="nav__link" href="about.html">About</a></li>
+            <li class="nav__item"><a class="nav__link" href="interests.html">Interests</a></li>
+            <li class="nav__item"><a class="nav__link" href="gallery.html">Gallery</a></li>
+            <li class="nav__item"><a class="nav__link" href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <article> <!-- Main article content -->
+            <section>
+                <h2>Welcome to my homepage!</h2>
+                <p>Hello! My name is Matthew Hawley and I am building this site for my IT3240 course.
+                </p>
+            </section>
+        </article>
+    </main>
+    <footer> <!-- Footer section for copyright and later additions-->
+        <small>&copy; 2025 Matthew Hawley</small>
+    </footer>
+</body>
+
+</html>
